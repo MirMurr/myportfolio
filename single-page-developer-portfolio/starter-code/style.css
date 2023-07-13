@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inconsolata:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@100;300;400;500;600;700;800&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Public+Sans:wght@100;200;300;400;500&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
+
+
+:root {
+    --ff-heading: "DM Serif Display", serif;
+    --ff-body: "Public Sans", sans-serif;
+
+    --clr-primary-white: #ffff;
+    --clr-bg-color-primary: #151515;
+    --clr-secondary-mid-blue: #36536b;
+    --clr-secondary-dark-blue: #1b262f;
+    --clr--bg-color-secondary: #242424;
+    --clr--paragraph-long: #d9d9d9;
+    --clr--skyblue: rgba(0, 212, 255, 1);
+    --clr--bg-darkblue: #0e1926;
+
+
+    /*FONT-SIZE HEADINGS*/
+    /*--fs-heading-1: 6.5rem;*/
+    --fs-heading-1: clamp(3.3rem, 6vw + 1rem, 7.5rem); /*changed to 3.3 from 3*/
+    /*it works just find the right vw and right font sizes*/
+    --fs-heading-2: 4rem;
+    --fs-heading-2: clamp(2.7rem, 6vw + .5rem, 4rem);
+    --fs-heading-3: 2.4rem; /*edit this*/
+    --fs-link: 1.3rem;
+
+    /*FONT-SIZE BODY TEXT*/
+    --fs-text-body: 1.7rem;
+    /*--fs-text-body: clamp(1.6rem, 6vw + .5rem, 1.8); /*this one doesn´t work with clanp, fosi is too small*/
+    --fs-description: 1.6rem;
+
+    /*LINE HEIGHTS*/
+    --lh-heading-1: calc(var(--fs-heading-1) + (var(--fs-heading-1)/100));
+    --lh-intro-p: 2.2rem;
+    --lh-about-p: 2.9rem;
+    --lh-fs-text-body: calc(var(--fs-text-body) + (var(--fs-text-body)/1.5));
+    --lh-fs-description: calc(var(--fs-description) + (var(--fs-description)/1.5));
+
+
+    --padding-inter-section: 10rem;
+    --padding-sides: 5rem;
+
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --fs-text-body: 1.5rem;
+
+        --fs-heading-3: 2.2rem; /*edit this*/
+        --fs-description: 1.4rem;
+    }
+}
+
+/*typography: 
+    - with media queries - edit the root - same for padding and margins
+    - clamp(min, growth rate in vw + x rem, max) */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: 'Barlow Semi Condensed', 'DM Serif Display', 'Epilogue', 'Great Vibes', 'Inconsolata', 'Inter', 'Kumbh Sans', 'Montserrat', 'Mukta', 'Nixie One', 'Nunito', 'Open Sans', 'Playfair Display', 'Poppins', 'Public Sans', 'Raleway', 'Roboto Flex', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inconsolata';
+}
+
+body {
+    position: relative;
+    background-color: var(--clr-bg-color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+div {
+    color: var(--clr-primary-white);
+    color: var(--clr--paragraph-long);
+}
+
+h1 {
+    font-size: var(--fs-heading-1);
+}
+
+h2 {
+    font-size: var(--fs-heading-2);
+}
+
+a {
+    cursor: pointer;
+}
+
+header {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem var(--padding-sides);
+    border: purple solid 4px;
+}
+
+.home {
+    margin-left: auto;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navmenu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0rem;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+/*intro section*/
+.intro-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem var(--padding-sides);
+}
+
+.intro-text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-section h1 {
+    line-height: var(--lh-heading-1);
+    font-weight: 800;
+    color: var(--clr--paragraph-long);
+}
+
+.intro-section p {
+    font-size: var(--fs-text-body);
+    color: var(--clr--paragraph-long);
+    margin: 2rem 0;
+    line-height: var(--lh-intro-p);
+    letter-spacing: .05rem;
+}
+
+.image-container {
+    width: 35%;
+    min-width: 15rem;
+    /*min-width: 27rem; add this to tablet media query */
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+    padding-right: var(--padding-sides);
+}
+
+button,
+.projects-link,
+.project-btn {
+    padding: 1rem 1.7rem;
+    border: none;
+    outline: none;
+    border-radius: .9rem;
+    background: rgb(0, 212, 255);
+    background: linear-gradient(180deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 87%, rgba(0, 212, 255, 1) 100%);
+    margin: auto;
+    color: var(--clr-primary-white);
+    border: solid #ffff .5px;
+}
+
+button.submit {
+    font-size: var(--fs-link);
+    padding: 1rem 0;
+    width: 9rem;
+}
+
+button:active,
+button:focus {
+    border: .01px solid #ffff;
+}
+
+.projects-link:active,
+.projects-link:focus,
+button:active,
+button:focus {
+    border: 0.1px solid #ffff;
+    padding: .97rem 1.65rem;
+}
+
+button.submit:active {
+    padding: .97rem .5rem;
+
+}
+
+.projects-link:hover {
+    background: rgb(0, 212, 255);
+    background: linear-gradient(180deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.button-p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+a.project-btn {
+    background: rgb(9, 9, 121);
+    background: linear-gradient(90deg, rgba(9, 9, 121, 1) 34%, rgba(49, 201, 183, 1) 100%);
+    padding: 1rem 0.5rem;
+    width: 10rem;
+    text-align: center;
+    margin: 0;
+}
+
+a.project-btn:hover {
+    background: rgb(9, 9, 121);
+    background: linear-gradient(90deg, rgba(49, 201, 183, 1) 14%, rgba(9, 9, 121, 1) 100%);
+}
+
+a {
+    color: var(--clr-primary-white);
+    font-size: var(--fs-link);
+    letter-spacing: .1rem;
+    text-decoration: none;
+}
+
+.intro-section .projects-link {
+    margin-top: 9rem;
+}
+
+.contact-link {
+    color: var(--clr-primary-white);
+}
+
+.contact-link:hover {
+    color: var(--clr--skyblue);
+    transition: 1s;
+}
+
+.divide-hr {
+    width: 75%;
+    margin: var(--padding-inter-section) auto;
+}
+
+/* ABOUT SECTION */
+.skills {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--padding-sides);
+}
+
+.skills h2 {
+    margin-bottom: 4.5rem;
+}
+
+p.about {
+    width: 90%;
+    /*margin: auto;*/
+    line-height: var(--lh-about-p);
+    letter-spacing: .09rem;
+    font-size: var(--fs-text-body);
+}
+
+.skills .projects-link {
+    margin-top: calc(var(--padding-inter-section)/2);
+}
+
+/*CONTACT SECTION*/
+
+section.contact {
+    background-color: var(--clr-secondary-dark-blue);
+    display: flex;
+    height: auto;
+    padding: 8rem var(--padding-sides);
+    background-image: url(./assets/images/wave-5.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-blend-mode: exclusion;
+    background-blend-mode: multiply;
+}
+
+.contact-text h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contact-text,
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.contact-text {
+    padding: 0;
+}
+
+.contact-text p {
+    font-size: var(--fs-text-body);
+    line-height: var(--lh-fs-text-body);
+}
+
+#form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-self: center;
+    background-color: transparent;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: var(--fs-description);
+    background-color: var(--clr-secondary-dark-blue);
+    color: var(--clr-primary-white);
+    outline: none;
+    border: none;
+    border-bottom: .01rem var(--clr-primary-white) solid;
+}
+
+textarea {
+    height: 9rem;
+    background-color: transparent;
+    color: var(--clr-primary-white);
+}
+
+textarea::placeholder {
+    font-size: calc(var(--fs-description)/1.5);
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+button {
+    margin: 0;
+    margin-top: 2rem;
+    padding: 1rem 1.7rem;
+    width: 8rem;
+    align-self: center;
+}
+
+
+/*MY PROJECTS PAGE*/
+/*projects page intro*/
+.projects { /*main container for all projects*/
+    padding: 0;
+}
+
+.project-main {
+    font-size: var(--fs-text-body);
+    line-height: var(--lh-fs-text-body);
+}
+
+.projects-text-container {
+    padding: var(--padding-inter-section) var(--padding-sides);
+}
+
+.projects h1 {
+    margin-bottom: 5rem;
+}
+
+.projects-text-container p {
+    margin-bottom: 5rem;
+}
+
+/*projects page intro end*/
+
+/*container of each project*/
+.project {
+    padding: var(--padding-sides);
+    display: flex;
+}
+
+.container-p {
+    /*container of the project title, image and buttons*/
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+}
+
+.container-p h3 {
+    font-size: var(--fs-heading-3);
+}
+
+.project-image-container {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.p-description-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-description-container p {
+    margin-bottom: 5rem;
+    line-height: var(--lh-fs-text-body);
+    letter-spacing: .07rem;
+    font-size: var(--fs-description);
+}
+
+/* FOOTER */
+
+footer {
+    height: auto;
+    background-color: var(--clr--bg-darkblue);
+    margin-top: -.1rem;
+    padding: 2rem 0;
+}
+
+footer .navmenu {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem 0rem;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer span {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        /*Padding*/     
+        --padding-sides: 1rem;
+        --padding-inter-section: 5rem;
+    }
+
+    /*intro section*/
+    .intro-section {
+        align-items: center;
+    }
+
+    .intro-section h1,
+    .intro-section p {
+        text-align: center;
+    }
+
+    .intro-section .projects-link {
+        margin-top: 3rem;
+    }
+
+    .image-container {
+        width: 75%;
+        position:static;
+    }
+
+    /*end intro section*/
+
+    /*start about section*/
+
+    /*my skills section- NEW ABOUT SECTION*/
+
+    .skills {
+        border: red solid 3px;
+        margin-top: 0rem;
+        text-align: center;
+        padding: var(--padding-sides);
+    }
+
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+
+    /*end about section*/
+
+    /* start CONTACT SECTION*/
+
+    section.contact {
+        flex-direction: column;
+        padding: 6rem var(--padding-sides);
+    }
+
+    .contact-text h2 {
+        margin-bottom: 2rem;
+        font-weight: 700;
+    }
+
+    .contact-text,
+    .form-container, #form, .intro-text, p.about, .p-description-container {
+        width: 100%;
+    }
+
+    .contact-text {
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    #form {
+        width: 80%;
+    }
+
+    /* end CONTACT SECTION*/
+
+    /* MY PROJECTS PAGE*/
+    .project-main {
+        font-size: var(--fs-text-body);
+    }
+
+    .projects h1, .projects-text-container p {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    
+    .container-p, .project-image-container{
+        width: 100%;
+    }
+
+    .project { /*container of each project*/
+        flex-direction: column;
+        border: yellow solid 4px;
+    }
+
+    .p-description-container p, a, h3 {
+        text-align: center;
+
+    }
+
+    .button-p {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a.project-btn {
+        background: rgb(9, 9, 121);
+        background: linear-gradient(90deg, rgba(9, 9, 121, 1) 34%, rgba(49, 201, 183, 1) 100%);
+        margin: 0;
+    }
+}
