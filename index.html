@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <title>My portfolio</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navmenu">
+        <li>
+          <a href="https://www.frontendmentor.io/profile/MirMurr" target="_blank"><img src="./assets/images/icon-frontend-mentor.svg" alt="frontendmentor icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/MirMurr" target="_blank" ><img src="./assets/images/icon-github.svg" alt="github icon"></a>
+        </li>
+        <li>
+          <a href="#contact" class="contact-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro-section">
+      <div class="intro-text">
+        <h1>Hello there,<br>I am Andrea</h1>
+        <p>I am an aspiring front-end developer, passionate about building accessible, esthetic, responsive websites.</p>
+      </div>
+      <div class="image-container">
+        <img src="./assets/portfolio profile pics/IMG_2075_profile.jpeg" alt="profile picture">
+      </div>
+      <a href="./projects.html" class="projects-link">Projects</a>
+    </section>
+    <!--<div class="div-span"></div>-->
+    <hr class="divide-hr">
+    <section class="skills">
+      <h2>About me</h2>
+      <p class="about">I am a life-long learner, I like building stuff (especially websites :) ). Currently I am working from home as a data analyst for a company in Vienna. I build front- end projects in my free-time because I enjoy learning creative, challenging things. I am continously working on my front-end and design skills to get better in this field. I speak English, German and Hungarian languages. When I am not building stuff, I like spending my time with traveling, photography, swimming, reading, playing boardgames. If you have some exciting challenge for me to work together on, I am happy to hear from you.</p>
+      <a href="./projects.html" class="projects-link" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">Projects</a>
+    </section>
+    <hr class="divide-hr">
+   
+    <section class="contact" id="contact">
+      <div class="contact-text">
+        <h2>Contact</h2>
+        <p>Let´s create something awesome together.</p>
+      </div>
+      <div class="form-container">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="db073e47-3004-42f4-9242-64af4e35b60b">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">E-Mail</label>
+          <input type="email" name="email" id="emial" required>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Type a message" class="msg" required></textarea>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success">
+          <button type="submit" class="submit">Send</button>
+      
+      </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul class="navmenu">
+      <li>
+        <a href="https://www.frontendmentor.io/profile/MirMurr" target="_blank"><img src="./assets/images/icon-frontend-mentor.svg" alt="frontendmentor icon"></a>
+      </li>
+      <li>
+        <a href="https://github.com/MirMurr" target="_blank" ><img src="./assets/images/icon-github.svg" alt="github icon"></a>
+      </li>
+    </ul>
+    <span>Coded and designed by Andrea</span>
+  </footer>
+
+<script>
+  AOS.init();
+</script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+
+</body>
+</html>
