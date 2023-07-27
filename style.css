@@ -363,7 +363,6 @@ button {
     align-self: center;
 }
 
-
 /*MY PROJECTS PAGE*/
 /*projects page intro*/
 .projects { /*main container for all projects*/
@@ -464,6 +463,10 @@ footer span {
         /*Padding*/     
         --padding-sides: 1rem;
         --padding-inter-section: 5rem;
+    }
+
+    body, main {
+        overflow-x: hidden;
     }
 
     /*intro section*/
