@@ -469,6 +469,11 @@ footer span {
         overflow-x: hidden;
     }
 
+    body > * {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
     /*intro section*/
     .intro-section {
         align-items: center;
