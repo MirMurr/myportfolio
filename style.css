@@ -105,6 +105,7 @@ header {
     align-items: center;
     gap: 2rem;
     padding: 4rem var(--padding-sides);
+    overflow: hidden;
 }
 
 .home {
@@ -363,6 +364,7 @@ button {
     align-self: center;
 }
 
+
 /*MY PROJECTS PAGE*/
 /*projects page intro*/
 .projects { /*main container for all projects*/
@@ -506,7 +508,6 @@ footer span {
     .skills h2 {
         margin-bottom: 3rem;
     }
-
     /*end about section*/
 
     /* start CONTACT SECTION*/
@@ -553,11 +554,15 @@ footer span {
 
     .project { /*container of each project*/
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 
     .p-description-container p, a, h3 {
         text-align: center;
+    }
 
+    .p-description-container p {
+        margin-bottom: 2.5rem;
     }
 
     .button-p {
