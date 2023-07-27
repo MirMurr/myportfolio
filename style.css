@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Serif+Display&family=Epilogue:wght@500;700&family=Great+Vibes&family=Inconsolata:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400&family=Kumbh+Sans:wght@200;400;500;700&family=Montserrat:wght@100;300;400;500;600;700;800&family=Mukta:wght@300;400;500;700&family=Nixie+One&family=Nunito:wght@200;300;600;700&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@700&family=Public+Sans:wght@100;200;300;400;500&family=Raleway:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap');
 
-
 :root {
     --ff-heading: "DM Serif Display", serif;
     --ff-body: "Public Sans", sans-serif;
@@ -106,7 +105,6 @@ header {
     align-items: center;
     gap: 2rem;
     padding: 4rem var(--padding-sides);
-    border: purple solid 4px;
 }
 
 .home {
@@ -161,7 +159,6 @@ li {
 .image-container {
     width: 35%;
     min-width: 15rem;
-    /*min-width: 27rem; add this to tablet media query */
     height: auto;
     position: absolute;
     top: 0;
@@ -278,7 +275,6 @@ a {
 
 p.about {
     width: 90%;
-    /*margin: auto;*/
     line-height: var(--lh-about-p);
     letter-spacing: .09rem;
     font-size: var(--fs-text-body);
@@ -399,8 +395,7 @@ button {
     display: flex;
 }
 
-.container-p {
-    /*container of the project title, image and buttons*/
+.container-p { /*container of the project title, image and buttons*/
     display: flex;
     width: 50%;
     height: auto;
@@ -494,10 +489,7 @@ footer span {
 
     /*start about section*/
 
-    /*my skills section- NEW ABOUT SECTION*/
-
     .skills {
-        border: red solid 3px;
         margin-top: 0rem;
         text-align: center;
         padding: var(--padding-sides);
@@ -553,7 +545,6 @@ footer span {
 
     .project { /*container of each project*/
         flex-direction: column;
-        border: yellow solid 4px;
     }
 
     .p-description-container p, a, h3 {
