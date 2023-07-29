@@ -7,6 +7,7 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js" async></script>
 
   <title>My portfolio</title>
 </head>
@@ -56,12 +57,15 @@
           <input type="hidden" name="access_key" value="db073e47-3004-42f4-9242-64af4e35b60b">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" required>
+          <div id="error-name" class="error"></div>
           <label for="email">E-Mail</label>
-          <input type="email" name="email" id="emial" required>
+          <input type="email" name="email" id="email" required>
+          <div id="error-email" class="error"></div>
           <label for="message">Message</label>
           <textarea name="message" id="message" placeholder="Type a message" class="msg" required></textarea>
+          <div id="error-msg" class="error"></div>
           <input type="hidden" name="redirect" value="https://web3forms.com/success">
-          <button type="submit" class="submit">Send</button>
+          <button type="button" class="submit">Send</button>
       
       </form>
       </div>
