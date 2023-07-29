@@ -12,6 +12,7 @@
     --clr--paragraph-long: #d9d9d9;
     --clr--skyblue: rgba(0, 212, 255, 1);
     --clr--bg-darkblue: #0e1926;
+    --clr-error: #FF254D;
 
 
     /*FONT-SIZE HEADINGS*/
@@ -333,7 +334,6 @@ input,
 textarea {
     background-color: transparent;
     width: 100%;
-    margin-bottom: 2rem;
     font-size: var(--fs-description);
     background-color: var(--clr-secondary-dark-blue);
     color: var(--clr-primary-white);
@@ -354,6 +354,7 @@ textarea::placeholder {
 
 label {
     margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 button {
@@ -362,6 +363,17 @@ button {
     padding: 1rem 1.7rem;
     width: 8rem;
     align-self: center;
+}
+
+.error {
+    display: block;
+    color: var(--clr-error);
+    margin-top: .5rem;
+
+}
+
+#email.active, #name.active, textarea.active {
+    border-bottom: var(--clr-error) 1.5px solid;
 }
 
 
