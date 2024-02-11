@@ -221,7 +221,7 @@ button.submit:active {
 .sql-button {
     margin-top: 2rem;
     padding: 1.4rem;
-    background-color: red;
+    color: red;
 }
 
 a.project-btn {
