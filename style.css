@@ -212,7 +212,7 @@ button.submit:active {
     background: linear-gradient(180deg, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
-.button-p {
+.button-p, .sql-button {
     width: 100%;
     display: flex;
     justify-content: center;
