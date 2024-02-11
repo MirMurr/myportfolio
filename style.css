@@ -204,7 +204,6 @@ button:focus {
 
 button.submit:active {
     padding: .97rem .5rem;
-
 }
 
 .projects-link:hover {
@@ -217,6 +216,12 @@ button.submit:active {
     display: flex;
     justify-content: center;
     gap: 2rem;
+}
+
+.sql-button {
+    margin-top: 2rem;
+    padding: 1.4rem;
+    background-color: red;
 }
 
 a.project-btn {
